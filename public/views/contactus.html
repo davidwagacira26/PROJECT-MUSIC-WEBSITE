@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Music Curation - Contact</title>
+    <link rel="shortcut icon" href="/assets/images/logo.png" type="image/png+xml">
+    <link rel="stylesheet" href="/public/stylesheets/contactus.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="/public/views/index.html"><i data-lucide="music"></i> Home</a></li>
+                <li><a href="/public/views/playlists.html"><i data-lucide="list"></i> Playlists</a></li>
+                <li><a href="/public/views/submissions.html"><i data-lucide="send"></i> Submissions</a></li>
+                <li><a href="/public/views/contactus.html"><i data-lucide="mail"></i> Reach Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="max-width: 800px;">
+        <h1 class="text-center mb-8">Get in Touch</h1>
+        <div class="grid md:grid-cols-2">
+            <div>
+                <h2 class="mb-4">Contact Information</h2>
+                <div class="mb-4">
+                    <p><i data-lucide="mail" style="display: inline; vertical-align: middle; margin-right: 10px;"></i> contact@yourmusiccuration.com</p>
+                </div>
+                <div class="mb-4">
+                    <p><i data-lucide="phone" style="display: inline; vertical-align: middle; margin-right: 10px;"></i> +1 (555) 123-4567</p>
+                </div>
+                <h2 class="mb-4">Follow Me</h2>
+                <div class="mb-4">
+                    <a href="#" class="mr-4"><i data-lucide="facebook" style="color: white;"></i></a>
+                    <a href="#" class="mr-4"><i data-lucide="twitter" style="color: white;"></i></a>
+                    <a href="#"><i data-lucide="instagram" style="color: white;"></i></a>
+                </div>
+            </div>
+            <div>
+                <h2 class="mb-4">Send a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="button" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Music Curation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

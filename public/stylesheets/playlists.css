@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+.playlists h1 {
+    margin-top: 50px; /* Adjust the value to move the name down */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    padding: 20px 0;
+    background-color: rgba(19, 21, 26, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #9333ea;
+}
+
+.button {
+    display: inline-block;
+    background-color: #9333ea;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #7e22ce;
+}
+
+/* Playlists section styles */
+.playlists {
+    padding: 60px 0;
+}
+
+.playlists h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.playlist-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.playlist-card p {
+    margin-bottom: 20px;
+    color: #a0aec0;
+}
+
+.playlist-card iframe {
+    width: 100%;
+    height: 380px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.spotify-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1DB954;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.spotify-button:hover {
+    background-color: #1ed760;
+}
+
+.spotify-button i {
+    margin-right: 8px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
