@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Music - Home</title>
+    <link rel="stylesheet" href="/public/stylesheets/index.css">
+    <link rel="shortcut icon" href="/assets/images/logo.png" type="image/png+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="/assets/images/logo.png" alt="MusicCurator Logo" class="logo-image">
+                Project Music
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/public/views/playlists.html">Playlists</a>
+                <a href="/public/views/aboutus.html">About</a>
+                <a href="/public/views/submissions.html">Submissions</a>
+            </div>
+            <a href="submissions.html" class="button">Contact</a>
+        </nav>
+    </header>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>
+                    <span class="fade-in">WE</span>
+                    <span class="fade-in">CURATE</span>
+                    <span class="highlight fade-in">MUSICAL</span>
+                    <span class="fade-in">EXPERIENCES</span>
+                </h1>
+                <p>Discover handpicked playlists that transcend genres and captivate listeners worldwide.</p>
+                <a href="playlists.html" class="button">Listen Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="/assets/images/image.png" alt="Music Visualization">
+            </div>
+        </section>
+
+        <section class="stats container">
+            <h2>Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Monthly Listeners</h3>
+                    <p class="stat-number">1000+</p>
+                    <p>Tuning in from over 150 countries</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Curated Playlists</h3>
+                    <p class="stat-number">20+</p>
+                    <p>Covering every mood and genre</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Featured Artists</h3>
+                    <p class="stat-number">200+</p>
+                    <p>From emerging talents to global stars</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Hours Streamed</h3>
+                    <p class="stat-number">1000+</p>
+                    <p>Of pure musical bliss</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features container">
+            <h2>Why Choose Project Music?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Expert Curation</h3>
+                    <p>With years of experience, playlists that are crafted with precision to create the perfect listening experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Tailored Playlists</h3>
+                    <p>Every playlist is uniquely tailored to  fit specific moods, themes ensuring that curation aligns with your needs</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Proven Track Record</h3>
+                    <p>With thousands of saves and consistent engagement across multiple playlists, there is clear history of sucess helping listeners to discover new music </p>
+                </div>
+                <div class="feature-card">
+                    <h3>Community-Driven</h3>
+                    <p>Join a vibrant community of music lovers and share your discoveries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta container">
+            <h2>Ready to Elevate Your Listening Experience?</h2>
+            <p>Join millions of music enthusiasts and start exploring curated playlists today.</p>
+            <a href="signup.html" class="button">Submit your music</a>
+        </section>
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+        </script>
+</body>
+</html>
