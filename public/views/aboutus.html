@@ -5,14 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Music - About</title>
     <link rel="shortcut icon" href="/assets/images/logo.png" type="image/png+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/stylesheets/aboutus.css">
 </head>
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
     <header>
         <nav class="container">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
             <div class="logo">
                 <img src="/assets/images/logo.png" alt="MusicCurator Logo" class="logo-image">
-                Project Music
+                <span class="project-name">Project Music</span>
             </div>
             <div class="nav-links">
                 <a href="/index.html">Home</a>
@@ -34,6 +43,11 @@
             </div>
         </section>
     </main>
-    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+           document.querySelector('.nav-links').classList.toggle('active');
+       });
+       lucide.createIcons();
+   </script>
 </body>
 </html>
