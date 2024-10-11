@@ -1,16 +1,69 @@
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+@keyframes move-background {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    100% { 
+        transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: white;
-    background-color: #000000;
+    background-color: #13151a;
     overflow-x: hidden;
+}
+
+.stars, .twinkling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat;
+    z-index: -2;
+}
+
+.twinkling {
+    background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png') repeat;
+    z-index: -1;
+    animation: move-background 70s linear infinite;
 }
 
 .about h1 {
@@ -22,6 +75,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
 }
 
 /* Header styles */
@@ -34,16 +88,28 @@ header {
     z-index: 1000;
 }
 
-
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
     display: flex;
     align-items: center;
 }
@@ -53,9 +119,16 @@ nav {
     height: 40px;
     margin-right: 10px;
 }
+
+.project-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .nav-links {
     display: flex;
     gap: 20px;
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -68,20 +141,8 @@ nav {
     color: #9333ea;
 }
 
-.button {
-    display: inline-block;
-    background-color: #9333ea;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
 
-.button:hover {
-    background-color: #7e22ce;
-}
-/* About section styles */
+            /* About section styles */
 .about {
     padding: 60px 0;
 }
@@ -102,10 +163,69 @@ nav {
     font-size: 18px;
 }
 
+/* Improved typography */
+body {
+    font-weight: 300;
+}
 
-/* Responsive styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    .playlists {
+        padding-top: 100px;
+    }
+
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(19, 21, 26, 0.95);
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .playlist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .playlists h1 {
+        font-size: 36px;
+    }
+
+    .playlist-card h2 {
+        font-size: 20px;
+    }
+
+    .playlist-card p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex !important;
+    }
+
+    .menu-toggle {
+        display: none !important;
     }
 }
