@@ -11,12 +11,16 @@
 <body>
     <div class="stars"></div>
     <div class="twinkling"></div>
-    
     <header>
         <nav class="container">
-            <div class="logo">
+            <div class="logo-container">
                 <img src="/assets/images/logo.png" alt="MusicCurator Logo" class="logo-image">
-                Project Music
+                <span class="project-name">Project Music</span>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div class="nav-links">
                 <a href="/index.html">Home</a>
@@ -26,23 +30,18 @@
             </div>
         </nav>
     </header>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
 
     <main>
         <section class="hero container">
             <div class="hero-content">
                 <h1>
-                    <span class="fade-in">WE</span>
+                    <span class="fade-in">I</span>
                     <span class="fade-in">CURATE</span>
                     <span class="highlight fade-in">MUSICAL</span>
                     <span class="fade-in">EXPERIENCES</span>
                 </h1>
                 <p>Discover handpicked playlists that transcend genres and captivate listeners worldwide.</p>
-                <a href="playlists.html" class="button">Listen Now</a>
+                <a href="/public/views/playlists.html" class="button">Listen Now</a>
             </div>
             <div class="hero-image">
                 <img src="/assets/images/image.png" alt="Music Visualization">
@@ -55,7 +54,7 @@
                 <div class="stat-card">
                     <h3>Monthly Listeners</h3>
                     <p class="stat-number">1000+</p>
-                    <p>Tuning in from over 150 countries</p>
+                    <p>Tuning in from over 20 countries</p>
                 </div>
                 <div class="stat-card">
                     <h3>Curated Playlists</h3>
@@ -80,15 +79,15 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>Expert Curation</h3>
-                    <p>With years of experience, playlists that are crafted with precision to create the perfect listening experience.</p>
+                    <p>With years of experience, playlists are crafted with precision to create the perfect listening experience.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Tailored Playlists</h3>
-                    <p>Every playlist is uniquely tailored to  fit specific moods, themes ensuring that curation aligns with your needs</p>
+                    <p>Every playlist is uniquely tailored to fit specific moods, themes ensuring that curation aligns with your needs</p>
                 </div>
                 <div class="feature-card">
                     <h3>Proven Track Record</h3>
-                    <p>With thousands of saves and consistent engagement across multiple playlists, there is clear history of sucess helping listeners to discover new music </p>
+                    <p>With thousands of saves and consistent engagement across multiple playlists, there is clear history of success helping listeners to discover new music </p>
                 </div>
                 <div class="feature-card">
                     <h3>Community-Driven</h3>
@@ -98,14 +97,16 @@
         </section>
 
         <section class="cta container">
-            <h2>Ready to Elevate Your Listening Experience?</h2>
-            <p>Join millions of music enthusiasts and start exploring curated playlists today.</p>
-            <a href="signup.html" class="button">Submit your music</a>
+            <h2>Ready to Share Your Sound to The World?</h2>
+            <p>Send your track, get listened to and guaranteed honest feedback and even opportunities for your music</p>
+            <a href="/public/views/submissions.html" class="button">Submit your music</a>
         </section>
-        <script>
-            document.querySelector('.menu-toggle').addEventListener('click', function() {
-                document.querySelector('.nav-links').classList.toggle('active');
-            });
-        </script>
+    </main>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
