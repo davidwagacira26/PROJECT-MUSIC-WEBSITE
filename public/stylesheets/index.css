@@ -86,8 +86,23 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.4s;
 }
 
 .logo-container {
@@ -109,6 +124,7 @@ nav {
 .nav-links {
     display: flex;
     gap: 20px;
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -133,21 +149,6 @@ nav {
 
 .button:hover {
     background-color: #7e22ce;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-left: 20px;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 2px 0;
-    transition: 0.4s;
 }
 
 /* Hero section styles */
@@ -385,5 +386,9 @@ html {
 @media (min-width: 769px) {
     .nav-links {
         display: flex !important;
+    }
+
+    .menu-toggle {
+        display: none !important;
     }
 }
