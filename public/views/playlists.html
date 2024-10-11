@@ -9,14 +9,21 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
     <header>
         <nav class="container">
             <div class="logo">
                 <img src="/assets/images/logo.png" alt="MusicCurator Logo" class="logo-image">
                 Project Music
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
             </div>
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="/index.html">Home</a>
                 <a href="/public/views/playlists.html">Playlists</a>
                 <a href="/public/views/aboutus.html">About</a>
                 <a href="submissions.html">Submissions</a>
@@ -123,6 +130,9 @@
     </main>
 
     <script>
+         document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
         lucide.createIcons();
     </script>
 </body>
